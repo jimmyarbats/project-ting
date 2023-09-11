@@ -30,7 +30,9 @@ def search_by_word(word, instance):
         file_data = instance.search(file_index)
         events = [
             {"linha": line_index, "conteudo": line}
-            for line_index, line in enumerate(file_data["linhas_do_arquivo"], start=1)
+            for line_index, line in enumerate(
+                file_data["linhas_do_arquivo"], start=1
+                )
             if word.lower() in line.lower()
         ]
 

@@ -1,6 +1,7 @@
 from ting_file_management.file_management import txt_importer
 import sys
 
+
 def process(path_file, instance):
     file = txt_importer(path_file)
     if file is not None:
