@@ -7,6 +7,9 @@ class Queue(AbstractQueue):
 
     def __len__(self):
         return len(self._data)
+    
+    def __contains__(self, value):
+        return value in self._data
 
     def is_empty(self):
         return self._data == []
